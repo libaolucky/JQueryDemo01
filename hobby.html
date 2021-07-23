@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-3.6.0.js"></script>
+	</head>
+	<body>
+		<h2>请选择您的爱好！</h2> <br>
+		<form action="" method="post">
+			爱好： <br>
+			<input type="checkbox" name="hh" /> 全选/全不选  <br> 
+			<input type="checkbox" name="hh" />  足球 
+			<input type="checkbox" name="hh" />  篮球
+			<input type="checkbox" name="hh" />  游泳
+			<input type="checkbox" name="hh" />  唱歌 <br>
+			<hr>
+			<input id="selectBtn" type="button" value="全选" />
+			<input type="reset" value="全不选" />
+			<input id="resver" type="button" value="反选" />
+			<input type="submit" value="提交" />
+			
+		</form>
+		
+		<script>
+			/* 全选 */
+			$(function(){ 
+				$("#selectBtn" ).click(function(){
+				$("input[name='hh']").prop("checked",true);
+				});
+			});
+			
+			/* 反选 */
+			$(function(){
+				$("#resver" ).click(function(){
+					$("input[name='hh']").each(function(){
+						this.checked=!this.checked;
+					});
+				});
+			});
+			
+		</script>
+	</body>
+</html>
